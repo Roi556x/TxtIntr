@@ -4,16 +4,16 @@
 
 all: debug release
 
-debug: hello-dbg
+debug: main-dbg
 
 hello-dbg: hello.cpp
-	g++ -g -O0 hello.cpp -o hello-dbg -Wall
+	g++ -g -O0 main.cpp -o main-dbg -Wall
 
-release: hello
+release: main
 
-hello: hello.cpp
-	g++ -O2 hello.cpp -o hello -DNDEBUG -Wall
+hello: main.cpp
+	g++ -O2 main.cpp -o main -DNDEBUG -Wall
 
 clean:
-	rm -f hello 
+	rm -f main 
 
